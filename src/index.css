@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #2C2416;
+  background-color: #F5F0E6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #F5F0E6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.font-calligraphy {
+  font-family: 'Ma Shan Zheng', 'ZCOOL XiaoWei', serif;
+}
+
+.font-song {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', serif;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes stamp {
+  0% { opacity: 0; transform: scale(1.2) rotate(-5deg); }
+  60% { opacity: 1; transform: scale(0.95) rotate(2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+.animate-fade-in-up { animation: fadeInUp 0.4s ease-out both; }
+.animate-scale-in { animation: scaleIn 0.3s ease-out both; }
+.animate-stamp { animation: stamp 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both; }
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(139, 69, 19, 0.2); border-radius: 3px; }
+.scrollbar-thin::-webkit-scrollbar-thumb:hover { background: rgba(139, 69, 19, 0.4); }
